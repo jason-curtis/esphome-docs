@@ -20,6 +20,9 @@ remote signals.
     This component is more accurate on the ESP32, since that chipset has a dedicated
     peripheral for sending exact signal sequences.
 
+    In that case, you may need to adjust the `rmt_channel` configuration of other peripherals such as :ref:`esp32_rmt_led_strip`
+    to prevent a conflict. The channel used by `remote_transmitter` will be listed in your log output.
+
 .. code-block:: yaml
 
     # Example configuration entry
